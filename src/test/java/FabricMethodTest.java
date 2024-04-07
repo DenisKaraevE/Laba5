@@ -9,4 +9,9 @@ public class FabricMethodTest {
         Configuration configuration = Configuration.initMob();
         assertEquals(MOB, configuration.getPlatform());
     }
+    @Test
+    public void TestWeb(){
+        Configuration configuration = Configuration.initWeb();
+        assertEquals(WEB, configuration.getPlatform());
+    }
 }
