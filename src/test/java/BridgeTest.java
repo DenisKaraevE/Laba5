@@ -20,4 +20,19 @@ public class BridgeTest {
         assertEquals (radio.getVolume(), 0);
         assertEquals (radio.isEnabled(), false);
     }
+    @Test
+    public void testTV(){
+        TV tv = new TV();
+        BasicRemote basicRemote = new BasicRemote(tv);
+        basicRemote.power();
+        assertEquals (tv.getChannel(), 1);
+        assertEquals (tv.getVolume(), 30);
+        assertEquals (tv.isEnabled(), true);
+        AdvancedRemote advancedRemote = new AdvancedRemote(tv);
+        advancedRemote.power();
+        advancedRemote.mute();
+        assertEquals (tv.getChannel(), 1);
+        assertEquals (tv.getVolume(), 0);
+        assertEquals (tv.isEnabled(), false);
+    }
 }
