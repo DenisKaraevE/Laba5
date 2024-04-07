@@ -9,4 +9,9 @@ public class AbstractFactoryTest {
         Configuration configuration =  Configuration.initMob();
         assertEquals(MOB, configuration.getPlatform());
     }
+    @Test
+    public void testWeb(){
+        Configuration configuration = Configuration.initWeb();
+        assertEquals(WEB, configuration.getPlatform());
+    }
 }
