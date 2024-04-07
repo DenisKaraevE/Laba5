@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BuilderTest {
     @Test
-            public void test() {
+    public void test() {
         CarBuilder builder = new CarBuilder();
         CarType expectedType = CarType.SPORTS_CAR;
         int expectedSeats = 2;
