@@ -19,6 +19,6 @@ public class StrategyTest {
         assertEquals("корова,собака,мышь,кошка", service.exec(strings));
         strategy = new SemicolonSeparatedStrategy();
         service.setStrategy(strategy);
-        assertEquals("корова,собака,мышь,кошка", service.exec(strings));
+        assertEquals("корова;собака;мышь;кошка", service.exec(strings));
     }
 }
